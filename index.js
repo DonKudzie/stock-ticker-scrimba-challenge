@@ -4,6 +4,7 @@ let lastPrice = null
 function renderStockTicker(){
     let {name,sym,price,time} = getStockData()
 
+
     console.log(price)
     
 
@@ -18,18 +19,18 @@ function renderStockTicker(){
     stockDisplaySymbol.textContent = `Symbol : ${sym}`
     if (lastPrice !==null){
         if (price > lastPrice){
-             stockDisplayPrice.textContent = `Price : ${price} green`
+             stockDisplayPrice.textContent = `Price : ${price}  ▲`
         }
         else if (price < lastPrice){
-             stockDisplayPrice.textContent = `Price : ${price} red`
+             stockDisplayPrice.textContent = `Price : ${price}  ▼`
         }
         else{
-             stockDisplayPrice.textContent = `Price : ${price} grey`
+             stockDisplayPrice.textContent = `Price : ${price} `
         }
        
     }
     else{
-        stockDisplayPrice.textContent = `Price : ${price} green`
+        stockDisplayPrice.textContent = `Price : ${price} `
     }
     lastPrice = price
     
