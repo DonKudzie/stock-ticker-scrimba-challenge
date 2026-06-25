@@ -5,7 +5,7 @@ function renderStockTicker(){
     let {name,sym,price,time} = getStockData()
 
 
-    console.log(price)
+  
     
 
     const stockDisplayName = document.getElementById("stock-data-name")
@@ -43,7 +43,7 @@ function renderStockTicker(){
 
 
 renderStockTicker()
-setInterval(renderStockTicker,15000)
+setInterval(renderStockTicker,1500)
 
 
 
